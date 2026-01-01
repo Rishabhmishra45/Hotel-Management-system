@@ -31,6 +31,7 @@ Frontend and Admin Panel consume these APIs separately.
 
 ## 📁 Backend Folder Structure
 
+```
 backend/
 │
 ├── src/
@@ -83,8 +84,7 @@ backend/
 ├── package.json
 ├── .gitignore
 └── README.md
-
-
+```
 ---
 
 ## 🔐 Authentication
@@ -168,3 +168,35 @@ Admin dashboard APIs provide:
 - Total dishes
 - Total bookings
 - Total revenue
+
+---
+
+## ⚙️ Environment Variables
+
+Create `.env` using `.env.example`
+
+```env
+PORT=5000
+NODE_ENV=development
+
+MONGO_URI=your_mongodb_atlas_uri
+
+JWT_ACCESS_SECRET=your_access_secret
+JWT_REFRESH_SECRET=your_refresh_secret
+JWT_ACCESS_EXPIRES=15m
+JWT_REFRESH_EXPIRES=7d
+
+ADMIN_EMAIL=admin@staysync.com
+ADMIN_PASSWORD=StrongPassword@123
+
+CLOUDINARY_CLOUD_NAME=xxx
+CLOUDINARY_API_KEY=xxx
+CLOUDINARY_API_SECRET=xxx
+
+EMAIL_USER=yourgmail@gmail.com
+EMAIL_PASS=app_password
+
+RAZORPAY_KEY_ID=rzp_test_xxx
+RAZORPAY_KEY_SECRET=xxx
+
+STRIPE_SECRET_KEY=sk_test_xxx
