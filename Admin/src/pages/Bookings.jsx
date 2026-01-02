@@ -198,7 +198,7 @@ const Bookings = () => {
     a.download = `bookings_${new Date().toISOString().split('T')[0]}.csv`
     a.click()
     window.URL.revokeObjectURL(url)
-    
+
     toast.success('Bookings exported successfully!')
   }
 
@@ -322,7 +322,7 @@ const Bookings = () => {
               ) : (
                 filteredBookings.map((booking) => {
                   const statusActions = getStatusActions(booking.status)
-                  
+
                   return (
                     <tr key={booking._id} className="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
                       <td className="px-6 py-4">
@@ -418,7 +418,7 @@ const Bookings = () => {
         ) : (
           filteredBookings.map((booking) => {
             const statusActions = getStatusActions(booking.status)
-            
+
             return (
               <div key={booking._id} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
                 <div className="p-5">
@@ -434,7 +434,7 @@ const Bookings = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3 mb-4">
                     <div className="flex items-center">
                       <Bed className="h-4 w-4 text-gray-400 mr-2" />
@@ -451,7 +451,7 @@ const Bookings = () => {
                       <span className="font-bold text-gray-900 dark:text-white">${booking.totalPrice?.toFixed(2) || '0.00'}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-200 dark:border-gray-700">
                     <button
                       onClick={() => viewBookingDetails(booking)}
@@ -680,7 +680,7 @@ const Bookings = () => {
                 { status: 'Cancelled', count: stats.cancelled, color: 'bg-red-500', textColor: 'text-red-800 dark:text-red-300' },
               ].map((item) => {
                 const percentage = stats.total > 0 ? (item.count / stats.total) * 100 : 0
-                
+
                 return (
                   <div key={item.status} className="space-y-2">
                     <div className="flex justify-between">
